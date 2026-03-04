@@ -1,0 +1,19 @@
+# Configuration file for harden.sh
+# Use key=value pairs. Values override all CLI flags.
+# Lists are comma-separated, no spaces.
+# firewall_rollback_seconds enables nftables/iptables rollback timer.
+
+services=ssh,http
+users=root,devteam
+groups=wheel
+ports=22,80,443
+
+apply=false
+ssh_password_only=false
+non_interactive=false
+lock_users=true
+delete_users=false
+rotate_passwords=false
+purge=false
+min_uid=1000
+firewall_rollback_seconds=0
